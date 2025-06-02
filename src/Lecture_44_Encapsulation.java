@@ -32,7 +32,7 @@ public class Lecture_44_Encapsulation {
     public static void main(String args[]){
 
         Encapsulation obj = new Encapsulation();
-        //obj.setName("Prad");
+        obj.setName("Prad");
         obj.setAge(22);
         obj.setName1("Chin Chin",obj); //You are passing the object which you created.
         System.out.println(obj.getName());
