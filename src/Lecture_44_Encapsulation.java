@@ -20,6 +20,8 @@ class Encapsulation{
     //If you're not using "this" keyword you woulds be doing it the below way.
     public void setName1(String Name,Encapsulation object){
          object.name= Name; //The "this" keyword represents the object that is calling the method.So its basically obj.name.
+                            // Java by default will give you the object like how we are passing the object as an argument
+                            // and we can use the "this" keyword which represents the object that was used to call.
     }
 
     public void setAge(int Age){
