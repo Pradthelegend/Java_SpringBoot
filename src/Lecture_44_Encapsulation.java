@@ -14,7 +14,12 @@ class Encapsulation{
     }
 
     public void setName(String Name){
-        this.name= Name;
+        this.name= Name; //The "this" keyword represents the object that is calling the method.So its basically obj.name.
+    }
+
+    //If you're not using "this" keyword you woulds be doing it the below way.
+    public void setName1(String Name,Encapsulation object){
+         object.name= Name; //The "this" keyword represents the object that is calling the method.So its basically obj.name.
     }
 
     public void setAge(int Age){
@@ -27,8 +32,9 @@ public class Lecture_44_Encapsulation {
     public static void main(String args[]){
 
         Encapsulation obj = new Encapsulation();
-        obj.setName("Prad");
+        //obj.setName("Prad");
         obj.setAge(22);
+        obj.setName1("Chin Chin",obj); //You are passing the object which you created.
         System.out.println(obj.getName());
         System.out.println(obj.getAge());
     }
