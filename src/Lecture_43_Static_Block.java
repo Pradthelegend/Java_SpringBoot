@@ -3,30 +3,29 @@ class Practice2{
     int price;
     static String name;
 
-    static {
+    static { // This gets executed when a class is loaded into "Class loader"(Class loader is an area inside the jvm which will contain
+        // all the classes which are loaded and class loads only once and hence static methods gets called only once).
+        // This block is gonna get executed only one. Whenever we do this  "ClassName objectName = new Practice2();" the class
+        // gets loaded into the class loader.
         name="Chin Chin";
         System.out.println("In static block");
     }
-    public void Practice2(){
-        brand ="";
-        price=200;
+
+    public Practice2(String brand, int price){
+        brand = brand;
+        price= price;
         System.out.println(brand+" : "+price+" : "+name);
-    }
-
-    public void show() {  // Instance Methods
-
-        System.out.println(brand+" : "+price+" : "+name);
-    }
-
-    public static void show1(Practice1 obj){ // static methods belong to the class itself.
-
-        System.out.println(obj.brand+" : "+obj.price+" : "+name);
+        System.out.println("This is a constructor");
     }
 }
-public class Lecture_43_Static_Block {
-    public static void main(String args[]) {
 
-        Practice2 practice2 = new Practice2();
+public class Lecture_43_Static_Block {
+    public static void main(String args[]) throws ClassNotFoundException {
+
+        Practice2 practice1 = new Practice2("Prad",123);
+        Practice2 practice2 = new Practice2("Chin",2);
+
+//        Class.forName("Practice2");
 
     }
 }
