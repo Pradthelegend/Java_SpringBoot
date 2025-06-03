@@ -11,8 +11,6 @@ class Calc{
         int ans = num1 - num2;
         return ans;
     }
-
-
 }
 
 class AdvanceCalc extends Calc{
@@ -25,10 +23,8 @@ class AdvanceCalc extends Calc{
                                   //that method is called. Technically method of the child class overrides the method of the parent class.
         return ans;
     }
-
-
-
 }
+
 public class Lecture_56_Method_Overriding {
 
     public static void main(String args[]){
