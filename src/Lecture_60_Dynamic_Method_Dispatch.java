@@ -1,4 +1,4 @@
-//This code explains runtime prlymorphism
+//This code explains runtime prlymorphism and Dynamic method dispatch is an example of runtime polymorphism.
 
 class a{
 
