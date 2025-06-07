@@ -20,6 +20,7 @@ public class Lecture_63_Upcasting_and_Downcasting {
 
         a2 obj3 = new a2();
         //b2 obj4 = (b2) obj3; // This line will throw an error at runtime.Compiles fine (compiler trusts you when you cast).
+                               // You can only downcast if the actual object (not just the reference) is of the subclass type.
 
         obj3.show1();
         obj2.show2();
