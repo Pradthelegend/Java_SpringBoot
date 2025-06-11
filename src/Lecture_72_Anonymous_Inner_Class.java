@@ -12,7 +12,7 @@ public class Lecture_72_Anonymous_Inner_Class {
         A2 obj = new A2(); // Just creating an object.
         obj.show();
 
-        A2 obj1 = new A2(){/*
+        A2 obj1 = new A2(){/* We are creating an object of anonymous Inner class
                            This is called a new Inplimentation. This is an anonymous inner class, it's an inner class cause its indside "Lecture_72_Anonymous_Inner_Class".
                            This class does not have a name but when we compile a new class file will be created like always.(Note : Class files are created for every class whenever compiled
                            /* let's say we extend a class even the "parent class" .class file will be created).
