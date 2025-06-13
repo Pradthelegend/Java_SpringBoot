@@ -23,13 +23,14 @@ public class Lecture_77_Enum {
 
     public static void main(String args[]) {
 
-        Status s = Status.Success;
-        System.out.println(s);
+        Status s = Status.Success; // Here we are not calling the object instead we are assigning the memory address of the Success object to variable "s".
+        System.out.println(s);// same as s.toString(). By default, toString() on an enum constant returns its name, i.e., the text used in the declaration.
+        System.out.println("Adding toString() manually " + s.toString());
         s = Status.Failed;
         System.out.println(s);
         s = Status.Pending;
         System.out.println(s);
-        s = Status.Running;
+        s = Status.Running; //You’re assigning the Running object (which was already created by Java) to the variable s.
         System.out.println(s);
         System.out.println();
         System.out.println(s.ordinal()); // This will print their index number.
