@@ -1,4 +1,5 @@
-enum Laptop1{
+enum Laptop1{ // The only difference between an enum class and a regular class is that anothe class cannot extend this enum class, the remaining things work
+              // like creating a method, constructor, instance variable etc..
 /*
 public static final Laptop1 MacBook = new Laptop1(2000);
 public static final Laptop1 Asus = new Laptop1(3000);
