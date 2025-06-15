@@ -6,7 +6,7 @@ public class Lecture_87_try_with_multiple_catch {
 
         int[] num = {1, 4, 6, 3, 7};
 
-        try {
+        try { // Note: Expections are runtime errors
             j = 10 / i; // This will succeed since i = 2.
             /*
             If we devide by zero.
