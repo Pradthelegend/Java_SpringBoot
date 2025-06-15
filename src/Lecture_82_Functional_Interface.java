@@ -9,7 +9,13 @@ interface A7{
 // Since they are static, they belong to the interface itself (not to any instance).
 // So you can create an object using: A7.B7 obj = new A7.B7(); obj.show();
 
-    class B7 {
+    class B7  {
+        public void show() {
+            System.out.println("21");
+        }
+    }
+
+    class B71 implements A7  { // Inner class can also impliment the Interface.
         public void show() {
             System.out.println("21");
         }
