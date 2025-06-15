@@ -1,5 +1,5 @@
 /*
- * Note : Lambda expressions can only be used with functional interfaces.
+ * Note : Lambda expressions can only be used with functional interfaces also verbose means have to type everything or being specific.
  * Before Java 8, Java was considered verbose, especially for functional-style operations.
  * Writing even small behaviors (like passing logic to a method) required creating full anonymous inner classes.
  *
@@ -35,6 +35,27 @@ public class Lecture_83_Lambda_Expressions {
          * but using lambda makes the code cleaner and shorter.
          */
         A8 obj1 = i -> System.out.println("In Show " + i);
+        // This lambda expression does NOT create an anonymous inner class.
+        /*
+        When we use a lambda expression like this:
+        A9 obj1 = (i, j) -> i + j;
+
+        Here's what actually happens behind the scenes:
+
+        1. The JVM automatically creates a class at runtime.
+        This class implements the A9 interface.
+        2. It creates an object of that generated class.
+        3. The lambda expression provides the implementation for the 'add' method.
+        4. The object is assigned to the reference variable 'obj1'.
+        5. We can then use obj1 to call the method (add) as usual.
+
+        So even though we don't write the class ourselves, Java still builds it internally.
+        This is more efficient and cleaner than writing a full anonymous inner class.
+*/
+
+
+
+
 
         obj.show(5);
         obj1.show(7);
