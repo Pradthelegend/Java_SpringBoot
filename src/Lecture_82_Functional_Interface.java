@@ -22,17 +22,19 @@ public class Lecture_82_Functional_Interface {
 
     public static void main(String args[]) {
 
-//        A7.B7 obj = new A7.B7();
-//        obj.show();
+        A7.B7 obj = new A7.B7();
+        obj.show();
 
-         A7 obj = new A7() { // we are just creating an annonymous inner class of interface A7 and providing the implimentation.
+        System.out.println("================================");
+
+         A7 obj1 = new A7() { // we are just creating an annonymous inner class of interface A7 and providing the implimentation.
              @Override
              public void show() {
                  System.out.println("In Show");
              }
          };
 
-         obj.show();
+         obj1.show();
 
          /*
          Another way to do the same thing would be to create another class that impliments A7 and declare the method there and create an object of
