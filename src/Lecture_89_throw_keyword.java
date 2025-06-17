@@ -9,7 +9,7 @@ public class Lecture_89_throw_keyword {
         try {
             j = 10 / i;
 
-            if(j==0){
+            if(j==0){ // Note: throw keyword is used to throw the exception and catch block will catch the exception.
                 throw new ArithmeticException("The exception was throne "); //throw new ArithmeticException("The exception was thrown"); // Manually throws an ArithmeticException with a custom message.
                                                                            // This message ("The exception was thrown") will be passed to the constructor of ArithmeticException.
                                                                           // Later, when we catch this exception and print it using System.out.println(e),
