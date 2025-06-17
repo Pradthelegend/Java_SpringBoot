@@ -15,6 +15,7 @@ public class Lecture_89_throw_keyword {
                                                                           // Later, when we catch this exception and print it using System.out.println(e),
                                                                           // it will display: java.lang.ArithmeticException: The exception was thrown
                                                                          // This helps in understanding what exactly caused the exception.
+                                                                         //Java calls the toString() method of the exception object e, and by default, toString() returns: java.lang.ArithmeticException
 
             }
 
