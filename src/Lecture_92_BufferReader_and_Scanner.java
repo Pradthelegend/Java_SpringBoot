@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Lecture_92_BufferReader_and_Scanner {
 
+    // Note : Just watch the tururial you'll understand better.
     public static void main(String args[]) throws IOException {
 
         // System.out is a static final PrintStream object in the System class.
