@@ -49,5 +49,18 @@ public class Lecture_93_Try_with_resources {
         } // bf.close() is called automatically here, even if an exception is thrown inside try
 
     }
+    /*
+Summary of Key Concepts in Comments:
+
+✅ BufferedReader is a resource that needs to be closed.
+
+✅ It implements the AutoCloseable interface, which means it has a close() method that Java can call automatically.
+
+✅ In try-with-resources, the resource is automatically closed after the try block ends (whether an exception is thrown or not).
+
+✅ This reduces boilerplate code and prevents resource leaks.
+
+✅ try-with-resources was introduced in Java 7.
+     */
 
 }
