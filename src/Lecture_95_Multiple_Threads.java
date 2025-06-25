@@ -42,4 +42,32 @@ public class Lecture_95_Multiple_Threads {
         // ...
         // Order is not guaranteed — depends on thread scheduling by JVM
     }
+
+    /*
+    There's another concept called Thread Priority:
+
+    Thread priority is a suggestion to the scheduler.
+    It ranges from 1 (lowest) to 10 (highest).
+    Use it when you want one thread to be more likely to get CPU time over another — but don't depend on it for correctness.
+
+    | Constant               | Value | Description      |
+| ---------------------- | ----- | ---------------- |
+| `Thread.MIN_PRIORITY`  | 1     | Lowest priority  |
+| `Thread.NORM_PRIORITY` | 5     | Default/Normal   |
+| `Thread.MAX_PRIORITY`  | 10    | Highest priority |
+
+
+Setting Priority in Java:
+Thread t1 = new Thread();
+t1.setPriority(10)=; // Highest priority
+Thread t2 = new Thread();
+t2.setPriority(1);  // Lowest priority
+
+You can also get a thread's current priority:
+int p = t1.getPriority();
+
+
+
+
+     */
 }
