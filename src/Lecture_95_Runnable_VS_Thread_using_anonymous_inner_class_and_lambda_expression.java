@@ -34,6 +34,12 @@ public class Lecture_95_Runnable_VS_Thread_using_anonymous_inner_class_and_lambd
 
 //    public static void main(String[] args) {
 //
+    // We use a lambda expression here because Runnable is a functional interface.
+// It has only one method: run()
+// So the lambda () -> { ... } is treated as the body of the run() method.
+// Java knows exactly which method we're implementing — no ambiguity allowed.
+// Lambdas cannot have multiple methods; they can only implement a single abstract method.
+
 //        Runnable obj = () ->{
 //                for (int i = 0; i < 5; i++) {
 //                    System.out.println("Hi from anonymous inner class");
