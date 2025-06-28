@@ -2,6 +2,8 @@ public class Lecture_95_Runnable_VS_Thread_using_anonymous_inner_class_and_lambd
 
     public static void main(String[] args) {
 
+        //Note: An anonymous inner class must either extend a class or implement an interface — but not both.
+        //Here the below anonymous inner class impliments Runnable.
         Runnable obj = new Runnable() {
 
             public void run() {
@@ -32,20 +34,16 @@ public class Lecture_95_Runnable_VS_Thread_using_anonymous_inner_class_and_lambd
 
 //    public static void main(String[] args) {
 //
-//        Runnable obj = new Runnable() {
-//
-//            public void run() {
+//        Runnable obj = () ->{
 //                for (int i = 0; i < 5; i++) {
 //                    System.out.println("Hi from anonymous inner class");
 //                }
-//            }
-//        };
+//            };
 //
-//        Runnable obj1 = new Runnable() {
-//            public void run() {
-//                for (int i = 0; i < 5; i++) {
-//                    System.out.println("Hello from anonymous inner class");
-//                }
+//
+//        Runnable obj1 =() ->{
+//            for (int i = 0; i < 5; i++) {
+//                System.out.println("Hello from anonymous inner class");
 //            }
 //        };
 //
