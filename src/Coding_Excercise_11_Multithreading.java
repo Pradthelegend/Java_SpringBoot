@@ -35,10 +35,5 @@ public class Coding_Excercise_11_Multithreading {
         try{
             Worker2.join();
         }catch (InterruptedException e){}
-
-
-
     }
 }
-
-
