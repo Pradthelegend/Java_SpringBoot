@@ -24,7 +24,9 @@ public class Lecture_101_ArrayList {
 
         //You're using a raw type, so the compiler treats nums as Collection<Object>
         // for (Object n : nums) {
-        //     int num = (Integer) n; // Manual cast required
+        //     int num = (Integer) n; // Manual cast required.Internally, ArrayList stores elements in an Object[] array.
+                                    //So even though you added Integer, it's stored as an Object.
+                                    // That’s why you need a cast when retrieving:
         //     System.out.println(num * 2);
         // }
 
