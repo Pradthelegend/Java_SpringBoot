@@ -7,8 +7,9 @@ public class Lecture_103_Map {
 
         Map<String,Integer> points = new HashMap<>(); // A Map is a collection of key/value pairs. We have to specify the type of the Key and value.
 
-        //Note: Keys are unique if we try to add two keys with the same name the second one is gonna override the first one.
-        points.put("Barcelona",9);//"put" is similar to "add" that is used in list to add elements to the list/Arraylist.
+        //Note:Keys are unique.
+        //Note:"keys are Set and values are List in a HashMap"- if you don't understand this ask chatGPT.
+         points.put("Barcelona",9);//"put" is similar to "add" that is used in list to add elements to the list/Arraylist.
         points.put("Man City",6);
         points.put("Bayern Munich",5);
         points.put("PSG",4);
