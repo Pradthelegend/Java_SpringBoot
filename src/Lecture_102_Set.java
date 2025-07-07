@@ -75,6 +75,7 @@ public class Lecture_102_Set {
 
         /*
 
+        The Collection Interface extends Iterator.
         Iterator is a tool to loop through collections in a uniform, type-safe way, and also allows safe element removal during traversal.
 
         Why not use a for-loop?
