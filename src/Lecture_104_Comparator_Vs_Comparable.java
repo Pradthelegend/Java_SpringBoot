@@ -3,6 +3,22 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+class Students1{
+
+    private int age;
+    private String name;
+
+    public Students1(int age,String name){
+        this.name = name;
+        this.age  = age;
+    }
+
+    @Override
+    public String toString(){
+
+        return "Student name : " + name + " and age is " + age;
+    }
+}
 public class Lecture_104_Comparator_Vs_Comparable {
 
     public static void main(String[] args) {
@@ -50,6 +66,18 @@ public class Lecture_104_Comparator_Vs_Comparable {
 
         Collections.sort(str,comp1);
         System.out.println(str);
+
+
+        List<Students1> studs = new ArrayList<>();
+        studs.add(new Students1(1,"Chin"));
+        studs.add(new Students1(19,"John"));
+        studs.add(new Students1(21,"Ney"));
+        studs.add(new Students1(32,"Messi"));
+
+        for (Students1 s : studs){
+
+            System.out.println(s);
+        }
 
 
 
