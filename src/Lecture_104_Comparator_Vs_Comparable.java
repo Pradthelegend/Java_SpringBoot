@@ -19,12 +19,6 @@ public class Lecture_104_Comparator_Vs_Comparable {
             }
         };
 
-        Comparator<String> comp1 = new Comparator<String>() {
-            @Override
-            public int compare(String i, String j) {
-
-            }
-        };
         List<Integer> nums = new ArrayList<>();
         nums.add(31);
         nums.add(82);
@@ -32,8 +26,33 @@ public class Lecture_104_Comparator_Vs_Comparable {
         nums.add(39);
 
         //sort() will sort it in ascending order.
-        Collections.sort(nums,comp);//Collections is a class whch has multiple methods.Pass comp if you want to sort using your own logic.
+        Collections.sort(nums,comp);//Collections is a class whch has multiple methods.Pass comp(which is an object of Comparator) if you want to sort using your own logic.
         System.out.println(nums);
+
+        Comparator<String> comp1 = new Comparator<String>() {
+            @Override
+            public int compare(String one,String two){
+                if((one.length())>(two.length())){
+                    return 1; //If you return 1 it will swap, opposite for -1.
+                }else {
+                    return -1;
+                }
+
+            }
+        };
+
+        List<String> str = new ArrayList<>();
+        str.add("John");
+        str.add("Abhishek");
+        str.add("Michael");
+        str.add("Chin Chin");
+        str.add("Messi");
+
+        Collections.sort(str,comp1);
+        System.out.println(str);
+
+
+
 
 
 
