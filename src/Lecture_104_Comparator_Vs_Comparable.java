@@ -5,8 +5,8 @@ import java.util.List;
 
 class Students1{
 
-    private int age;
-    private String name;
+    int age;
+    String name;
 
     public Students1(int age,String name){
         this.name = name;
@@ -74,10 +74,23 @@ public class Lecture_104_Comparator_Vs_Comparable {
         studs.add(new Students1(21,"Ney"));
         studs.add(new Students1(32,"Messi"));
 
-        for (Students1 s : studs){
+        Comparator<Students1> comp2 = new Comparator<Students1>() {
+            @Override
+            public int compare(Students1 i, Students1 j) {
+                if(i.age > j.age){
+                    return 1;
+                }else {
+                    return -1;
+                }
+            }
+        };
 
+        Collections.sort(studs,comp2);
+        for (Students1 s : studs){
             System.out.println(s);
         }
+
+
 
 
 
