@@ -23,8 +23,10 @@ public class Lecture_104_Comparator_Vs_Comparable {
 
     public static void main(String[] args) {
 
-        Comparator<Integer> comp = new Comparator<Integer>() {//Comparator is an interface which allows us to use our own logic for sorting we just need
-                                                             // to pass the ref variable as an argument to the sort().
+        /*
+        Comparator is an interface that allows custom sorting logic. Pass the Comparator reference to sort() when you want to sort using your own rule.
+         */
+        Comparator<Integer> comp = new Comparator<Integer>() {
             @Override
             public int compare(Integer i, Integer j) {
                 if(i%10 > j%10){
@@ -49,7 +51,8 @@ public class Lecture_104_Comparator_Vs_Comparable {
             @Override
             public int compare(String one,String two){
                 if((one.length())>(two.length())){
-                    return 1; //If you return 1 it will swap, opposite for -1.
+                    return 1; //If you return 1 it will swap, opposite for -1.Returning 1 tells Java that the first element is "greater",
+                              // so it should come after the second one (swap them). Returning -1 means keep them as is.
                 }else {
                     return -1;
                 }
@@ -67,7 +70,8 @@ public class Lecture_104_Comparator_Vs_Comparable {
         Collections.sort(str,comp1);
         System.out.println(str);
 
-
+        //Comparator<T> is a generic interface that compares two objects of type T.
+        //So Comparator<Students1> means you're creating a comparator for comparing two Students1 objects.
         List<Students1> studs = new ArrayList<>();
         studs.add(new Students1(1,"Chin"));
         studs.add(new Students1(19,"John"));
@@ -86,6 +90,9 @@ public class Lecture_104_Comparator_Vs_Comparable {
         };
 
         Collections.sort(studs,comp2);
+        // Collections.sort(studs); // ❌ Won’t work because Students1 doesn't implement Comparable.
+        // Either use Collections.sort(studs, comp2) OR implement Comparable in Students1.
+
         for (Students1 s : studs){
             System.out.println(s);
         }
