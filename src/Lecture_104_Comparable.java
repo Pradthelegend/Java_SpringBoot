@@ -20,10 +20,18 @@ class Students2 implements Comparable<Students2>{ // Comparable will give the cl
         return "Student name : " + name + " and age is " + age;
     }
 
+    //Java uses the object at one index to call compareTo() and passes another as an argument. That’s how sorting works with Comparable.
+    /*
+    Ex:
+    list.get(0).compareTo(list.get(1)) // s1 vs s2
+    list.get(0).compareTo(list.get(2)) // s1 vs s3
+    list.get(1).compareTo(list.get(2)) // s2 vs s3
+... and so on
+
+     */
     @Override
     public int compareTo(Students2 that){ // We have to define this method if our class impliments Comparable. We have to specify the logic to sort in this method.
         if(this.age > that.age){
-            System.out.println();
             return 1;
         }else {
             return -1;
