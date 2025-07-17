@@ -25,8 +25,10 @@ public class Lecture_111_Method_Reference {
                 Call the toUpperCase() method that belongs to the String class,
                 And return the result (the uppercase version) as the new value in the stream.
                 Syntax:<ClassName or object>::<methodName>
-                When you use a method reference with streams, Java automatically manages passing the stream elements to the method as its input.
-                */
+
+                In .map(String::toUpperCase), Java calls toUpperCase() on every element,
+                and any parameter passing expected by the method is taken care of by the stream and method reference mechanism.
+                                */
                 .toList();
         System.out.println(uNames1);
         uNames1.forEach(System.out::println);
