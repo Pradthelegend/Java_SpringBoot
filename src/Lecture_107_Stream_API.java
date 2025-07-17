@@ -6,6 +6,11 @@ public class Lecture_107_Stream_API {
 
     public static void main(String[] args) {
 
+        /*
+        Note:In Java Streams, a terminal operation is the final step in a stream pipeline.
+        It triggers the processing of the stream and produces a result — such as a value, a collection, or a side effect.
+        Without a terminal operation, nothing actually happens — the stream is lazy!
+   */
         // Create a list of integers
         List<Integer> nums = Arrays.asList(4, 6, 7, 3, 2, 9);
 
