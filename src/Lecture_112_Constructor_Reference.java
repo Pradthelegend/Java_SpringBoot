@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -45,12 +46,12 @@ public class Lecture_112_Constructor_Reference {
 
         List<String> names = Arrays.asList("John","Mega Do DO","Ghost","General Shepard");
 
-        List<String> uNames1 = names.stream()
-                .map(String::toUpperCase)
-                .toList();
-        System.out.println(uNames1);
-        uNames1.forEach(System.out::println);
+        List<Studs> students = new ArrayList<>();
 
+        for(String name : names){
+            students.add(new Studs(name));
+        }
 
+        System.out.println(students);
     }
 }
