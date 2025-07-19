@@ -33,7 +33,7 @@ class Studs{
 
     @Override
     public String toString() {
-        return "Studs{" +
+        return "Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
@@ -48,9 +48,21 @@ public class Lecture_112_Constructor_Reference {
 
         List<Studs> students = new ArrayList<>();
 
-        for(String name : names){
-            students.add(new Studs(name));
-        }
+//        for(String name : names){
+//            students.add(new Studs(name));
+//        }
+
+        //Performing the same operation as the foreach loop but using streams().
+//        students = names.stream()
+//                        .map(n -> new Studs(n))
+//                        .toList();
+
+        //Same code using Constructor Reference.
+
+        students = names.stream()
+                .map(Studs::new)//Constructor reference.
+                .toList();
+
 
         System.out.println(students);
     }
