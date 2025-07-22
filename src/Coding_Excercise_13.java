@@ -21,11 +21,15 @@ public class Coding_Excercise_13 {
                 }
             }
         };
-        Stream prods = products.stream()
-                .filter(p);
-
-        prods.forEach(n -> System.out.println(n));
+        List<String> prods = products.stream()
+                .filter(p)
+                .map(n -> n.toUpperCase())
+                .sorted()
+                .toList();
 
         // TODO: Print the filtered list
+
+        System.out.println("Filtered Products: " + prods);
+
     }
 }
