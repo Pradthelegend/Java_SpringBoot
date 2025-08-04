@@ -36,7 +36,7 @@ public class DemoJDBC {
             ResultSet rs = stmnt.executeQuery(sql);
             rs.next();
             String name = rs.getString("name");
-            System.out.println(name);
+            System.out.println("The name of the student is : " + name);
             connection.close();
             System.out.println("Connection Closed");
 
