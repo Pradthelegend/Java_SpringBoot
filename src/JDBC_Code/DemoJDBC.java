@@ -20,7 +20,7 @@ public class DemoJDBC {
 
         String url ="jdbc:postgresql://localhost:5432/demo";
         String user = "postgres";
-        String pwd = "P#ssw2rd1";
+        String pwd = "";
         String sql ="select name from students where id = 1";
 
         try {
