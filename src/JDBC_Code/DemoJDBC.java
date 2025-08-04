@@ -9,7 +9,7 @@ public class DemoJDBC {
     Seven Steps to follow:
 
     1)import the package "import java.sql.*;"
-    2)Load and Register.
+    2)Load and Register. (this is optional java will do it for you anyways.)
     3)Create Connection.
     4)Create Statement.
     5)Execute Statement.
@@ -18,9 +18,10 @@ public class DemoJDBC {
 
     */
 
-        String url ="jdbc:postgresql://localhost:5432/postgres";
+        String url ="jdbc:postgresql://localhost:5432/demo";
         String user = "postgres";
-        String pwd = "";
+        String pwd = "P#ssw2rd1";
+        String sql ="select name from students where id = 1";
 
         try {
             Class.forName("org.postgresql.Driver"); // Loading and registering the driver. Its optional.
@@ -30,11 +31,20 @@ public class DemoJDBC {
 
         try {
             Connection connection = DriverManager.getConnection(url,user,pwd);
+            System.out.println("Connection established");
+            Statement stmnt = connection.createStatement(); //Will return a Statement object.
+            ResultSet rs = stmnt.executeQuery(sql);
+            rs.next();
+            String name = rs.getString("name");
+            System.out.println(name);
+            connection.close();
+            System.out.println("Connection Closed");
+
         }catch (Exception e){
-            System.out.println("Connection Error");
+            System.out.println(e);
         }
 
-        System.out.println("Connection established");
+
 
 
 
