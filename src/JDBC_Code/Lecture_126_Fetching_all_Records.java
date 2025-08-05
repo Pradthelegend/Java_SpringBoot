@@ -11,7 +11,7 @@ public class Lecture_126_Fetching_all_Records {
 
         String url ="jdbc:postgresql://localhost:5432/demo";
         String user = "postgres";
-        String pwd = "P#ssw2rd1";
+        String pwd = "";
         String sql ="select * from students";
 
         try {
