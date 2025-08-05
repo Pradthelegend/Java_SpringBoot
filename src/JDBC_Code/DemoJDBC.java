@@ -35,7 +35,7 @@ public class DemoJDBC {
             Statement stmnt = connection.createStatement(); //Will return a Statement object.
             ResultSet rs = stmnt.executeQuery(sql);
             rs.next();
-            String name = rs.getString("name");
+            String name = rs.getString("name");// We are specifying the column name from where we want to get the data.
             System.out.println("The name of the student is : " + name);
             connection.close();
             System.out.println("Connection Closed");
