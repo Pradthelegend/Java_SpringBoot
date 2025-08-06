@@ -30,8 +30,11 @@ public class Lecture_126_Fetching_all_Records {
 //            System.out.println("The name of the student is : " + name);
 
             while (rs.next()){
-                System.out.println(rs.getInt(1));
-                System.out.println(rs.getString(2));
+                System.out.print(rs.getInt(1) + " | ");//getInt(1) means get the value in column 1 of the current row as an int.
+                                           //You can also use column names, like getInt("id") — this means get the value of the column named "id" in the current row.
+                System.out.print(rs.getString(2) + " | ");//getString(2) means get the value in column 2 of the current row as a String.
+                System.out.print(rs.getInt(3));
+                System.out.println();
             }
             connection.close();
             System.out.println("Connection Closed");
